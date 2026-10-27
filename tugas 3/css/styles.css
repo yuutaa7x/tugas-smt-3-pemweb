@@ -1,0 +1,75 @@
+/* Pengaturan dasar halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Bagian Atas / Header */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-link {
+    margin-left: 20px;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link a:hover {
+    color: #ffcc00;
+}
+
+/* Bagian Utama / Grid Elemen */
+.kartu_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 baris kotak */
+    gap: 20px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling Kotak-Kotaknya */
+article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Bagian Bawah / Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
