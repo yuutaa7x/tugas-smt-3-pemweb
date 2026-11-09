@@ -1,13 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pencari Profil GitHub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main class="finder-page">
+        <section class="container-finder" id="containerFinder">
+            <h1>Pencari Profil/Akun <span>GitHub</span></h1>
+
+            <form class="search-form" id="search-form" role="search">
+                <input class="search-input" type="text" id="username" placeholder="Masukkan username GitHub" autocomplete="off" aria-label="Username GitHub" required>
+                <button class="search-button" id="searchBtn" type="submit">Cari Data Profil/Akun</button>
+            </form>
+
+            <p class="search-status" id="searchStatus" role="status" aria-live="polite"></p>
+            <section class="profile-card" id="profileContainer" aria-label="Hasil profil GitHub" hidden>
+                <div class="profile-top">
+                    <img id="profileAvatar" class="profile-avatar" src="" alt="Avatar GitHub">
+                    <div class="profile-info">
+                        <h2 class="profile-name" id="profileDisplayName"></h2>
+                        <p class="profile-username" id="profileUsername"></p>
+                        <a class="profile-link" id="profileLink" target="_blank" rel="noopener noreferrer">Lihat profil GitHub</a>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <strong id="profileRepoTotal">0</strong>
+                        <span>Repositori publik</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
