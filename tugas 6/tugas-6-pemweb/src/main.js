@@ -1,4 +1,4 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import bukucatatan from './bukucatatan.vue'
 
-createApp(App).mount('#app')
+createApp(bukucatatan).mount('#buku')
