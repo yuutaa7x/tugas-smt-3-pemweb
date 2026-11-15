@@ -23,7 +23,6 @@
       selectedCategories: Category.value,
       haveRead: readedStatus.value //
     });
-
     newTask.value = '';
     Category.value = '';
     readedStatus.value = false;
