@@ -9,12 +9,13 @@
   const emit = defineEmits(["buy_product"])
 
   const handleBuy = () => {
-  if (props.stock > 0) {
+    if (props.stock > 0) {
       emit("buy_product", {
         id: props.id,
         name: props.name,
         price: props.price,
-        stock: props.stock})
+        stock: props.stock
+      })
     } else {
       alert("No Stock Left!")
     }
@@ -23,8 +24,8 @@
 
 <template>
   <div class="product-card">
-    <h3 class="product-name"> {{ name }} </h3>
-    <p class="product-price">Rp. {{ price.toLocaleString("id-ID") }} </p>
+    <h3 class="product-name">{{ name }}</h3>
+    <p class="product-price">Rp. {{ price.toLocaleString("id-ID") }}</p>
     <p class="product-stock" :class="{ 'out-of-stock': stock === 0 }">
       Stock: {{ stock > 0 ? stock : 'Out of stock' }}
     </p>
@@ -35,5 +36,28 @@
 </template>
 
 <style scoped>
-  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .out-of-stock {
+    color: red;
+    font-weight: bold;
+  }
+
+  .btn-buy {
+    background-color: #42b983;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-buy:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 </style>
