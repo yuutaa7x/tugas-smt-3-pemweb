@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <div class="card-product">
+  <div class="product-card">
     <h3 class="product-name"> {{ name }} </h3>
     <p class="product-price">Rp. {{ price.toLocaleString("id-ID") }} </p>
     <p class="product-stock" :class="{ 'out-of-stock': stock === 0 }">
